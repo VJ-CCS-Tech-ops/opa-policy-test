@@ -1,0 +1,22 @@
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Ignore Terraform crash logs
+crash.log
+
+# Ignore Terraform plan files
+*.tfplan
+
+# Ignore Conftest policies directory (if you prefer not to track policies)
+policy/
+
+# Ignore Conftest output files (if any)
+*.out
+*.json
+
+# Ignore editor and OS files
+*.swp
+.DS_Store
+.vscode/
+.idea/
