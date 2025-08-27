@@ -1,0 +1,20 @@
+{
+  "packages": {
+    "terraform":  "1.12.2",
+    "tfsec":  "1.28.13",
+    "conftest": "0.62.0"
+  },
+  "env": {
+    "ARM_TENANT_ID" : "2e119e68-e37d-48ba-85b4-0691c2c1ab19",
+    "ARM_CLIENT_ID" : "74ff0f76-2b22-4a02-b318-472316ef730f",
+    "ARM_CLIENT_SECRET" :  "YqM8Q~VkZ6Z~VcnjsIKXlmKYT8x3Va.o~_sDIcCY",
+    "ARM_SUBSCRIPTION_ID" : "610c3c5e-6ab7-4e4d-a170-b0e9ad4f72ff"
+  },
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to your Devbox with Terraform, tfsec, and Conftest!'"
+    ],
+    "scripts": {
+    }
+  }
+}

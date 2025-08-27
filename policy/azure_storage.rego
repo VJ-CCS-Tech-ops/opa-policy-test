@@ -33,13 +33,16 @@ deny contains msg if  {
   msg = sprintf("Storage Account %v must use min_tls_version = TLS1_2.", [resource.address])
 }
 
-# Request region to be UKSouth
+# Request region to be UKSouthd
 
 deny contains msg if {
   resource := input.resource_changes[_]
   resource.type == "azurerm_storage_account"
 
-  location := resource.change.after.location
-  not location == "us"
+  location := lower(resource.change.after.location)
+    us_regions := {"eastus", "eastus2", "westus", "westus2", "centralus", "northcentralus", "southcentralus"}
+
+  location == us_regions[_]
+
   msg := sprintf("Azure Storage Account '%v' must not be deployed in US region (%v)", [resource.name, location])
 }
